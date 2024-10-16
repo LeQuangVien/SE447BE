@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('ten_nguoi_nhan');
             $table->string('so_dien_thoai');
             $table->string('dia_chi_giao_hang');
+            $table->integer('so_luong')->nullable();
             $table->integer('id_khach_hang');
             $table->timestamps();
         });

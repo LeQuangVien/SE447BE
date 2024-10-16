@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ThemMoiKhachHangRequest;
 use App\Mail\KichHoatTaiKhoan;
 use App\Models\KhachHang;
 use Exception;
@@ -14,7 +15,7 @@ use Illuminate\Support\Str;
 
 class KhachHangController extends Controller
 {
-    public function create(Request $request)
+    public function create(ThemMoiKhachHangRequest $request)
     {
         try {
             $tai_khoan = KhachHang::create([

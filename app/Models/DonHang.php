@@ -18,5 +18,6 @@ class DonHang extends Model
         'so_dien_thoai',
         'dia_chi_giao_hang',
         'id_khach_hang',
+        'so_luong',
     ];
 }

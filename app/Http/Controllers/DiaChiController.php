@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ThemMoiDiaChiNhanHang;
 use App\Models\DiaChi;
 use Exception;
 use Illuminate\Http\Request;
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class DiaChiController extends Controller
 {
 
-    public function create(Request $request)
+    public function create(ThemMoiDiaChiNhanHang $request)
     {
         $khach_hang = Auth::guard('sanctum')->user();
         if ($khach_hang) {

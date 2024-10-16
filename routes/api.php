@@ -10,6 +10,7 @@ use App\Http\Controllers\KhachHangController;
 use App\Http\Controllers\NhanVienController;
 use App\Http\Controllers\SanPhamController;
 use App\Http\Controllers\TrangChuController;
+use App\Models\DonHang;
 use App\Models\KhachHang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -86,3 +87,15 @@ Route::post('/admin/change-tinh-trang-thanh-toan/changeTinhTrangDonHang', [Admin
 
 // Tim Kiem sp
 Route::post('/trang-chu/tim-kiem', [SanPhamController::class, 'timKiemTrangChu']);
+
+
+
+Route::post('/xoa-don-hang/admin', [DonHangController::class, 'destroys']);
+Route::get('/select-san-pham/admin', [SanPhamController::class, 'select']);
+// Route::post('/update-san-pham/admin', [SanPhamController::class, 'update']);
+Route::post('/xoa-san-pham/admin', [SanPhamController::class, 'destroys']);
+
+
+// Route::post('/nhap-kho/cap-nhat-san-pham-nhap-kho', [SanPhamController::class, 'capNhatSanPhamNhapKho']);
+
+Route::post('/profile/xoa-don-hang', [DonHangController::class, 'deleteProfile']);

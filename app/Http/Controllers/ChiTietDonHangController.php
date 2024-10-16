@@ -6,9 +6,12 @@ use App\Models\ChiTietDonHang;
 use App\Models\SanPham;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ChiTietDonHangController extends Controller
 {
+
+    
     public function themVaoGioHang(Request $request)
     {
         $khachhang = Auth::guard('sanctum')->user();
